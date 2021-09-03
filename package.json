@@ -1,0 +1,84 @@
+{
+  "name": "generate-react-cmp",
+  "displayName": "generate-react-cmp",
+  "publisher": "hliujie",
+  "description": "create react component easily",
+  "author": {
+    "name": "hliujie"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.46.0"
+  },
+  "icon": "images/logo.png",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:grc.ReactCmp",
+    "onCommand:grc.CustomTemp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stupidWall/vscode-plugin-generate-react-cmp.git"
+  },
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "grc.ReactCmp",
+        "title": "Generate React Component"
+      },
+      {
+        "command": "grc.CustomTemp",
+        "title": "Generate Custom Template"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "explorerResourceIsFolder",
+          "command": "grc.ReactCmp",
+          "group": "modification"
+        },
+        {
+          "when": "explorerResourceIsFolder",
+          "command": "grc.CustomTemp",
+          "group": "modification"
+        }
+      ]
+    },
+    "configuration": {
+      "type": "string",
+      "title": "generate react component",
+      "properties": {
+        "customTemplatePath": {
+          "type": "string",
+          "default": "",
+          "description": "custom template path, dirName path or file path"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "deploy": "vsce package && vsce publish"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.0",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.46.0",
+    "eslint": "^7.9.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.1.3",
+    "typescript": "^4.0.2",
+    "vscode-test": "^1.4.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "fs-extra": "^10.0.0",
+    "lodash.debounce": "^4.0.8",
+    "replace": "^1.2.1",
+    "sortablejs": "^1.12.0"
+  }
+}
