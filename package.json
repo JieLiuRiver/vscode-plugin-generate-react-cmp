@@ -1,12 +1,12 @@
 {
-  "name": "generate-react-cmp",
-  "displayName": "generate-react-cmp",
+  "name": "generate-react-component",
+  "displayName": "generate-react-component",
   "publisher": "hliujie",
   "description": "create react component easily",
   "author": {
     "name": "hliujie"
   },
-  "version": "0.0.1",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.46.0"
   },
@@ -61,6 +61,7 @@
     }
   },
   "scripts": {
+    "pack": "vsce package",
     "deploy": "vsce package && vsce publish"
   },
   "devDependencies": {
