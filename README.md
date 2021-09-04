@@ -24,4 +24,4 @@ create a file from template
 
 you have to provide template save path（directory or file path）
 
-setting - search 【customTemplatePath, eg: /Users/xxx/Desktop/imgs/template
+setting, and search 【customTemplatePath】field.  eg: /Users/xxx/Desktop/imgs/template
